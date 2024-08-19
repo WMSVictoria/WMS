@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import django_heroku
 from pathlib import Path
 import os
 
@@ -144,3 +144,5 @@ DEFAULT_FROM_EMAIL = 'kevinogutu263@gmail.com'  # Default sender email address
 ADMIN_EMAIL = 'kevinogutu263@gmail.com'
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+django_heroku.settings(locals())
